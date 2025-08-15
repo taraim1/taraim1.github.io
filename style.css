@@ -247,8 +247,114 @@ main h3 {
   height: auto;
 }
 
+#projects > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0 10% 200px 10%;
+  text-align: left;
+}
+
+@media (max-width: 1600px) {
+  #projects > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    height: 450px;
+  }
+}
+
+.project-card h3 {
+  color: white;
+  padding: 0;
+  margin: 10px 0 10px 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 32px;
+  background-color: black;
+  border-radius: 5px;
+  padding: 0 10px;
+  align-self: center;
+}
+
+.project-card hr {
+  margin: 0 10px;
+}
+
+.project-card .project-description {
+  margin: 10px 0 10px 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.project-card ul {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  list-style: disc;
+  margin: 0 0 10px 0;
+}
+
+.project-card .project-skills {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 0 10px;
+  padding: 2px 5px;
+  color: rgb(110, 104, 45);
+  background-color: rgb(255, 234, 165);
+  border-radius: 5px;
+  border: 1px solid rgb(255, 221, 109);
+  align-self: flex-start;
+}
+
+.project-card a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 10px 10px;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(173, 173, 173);
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.project-card img {
+  display: inline-block;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+
+.project-related-links {
+  display: flex;
+}
+
+#contact h2 {
+  margin-bottom: 0;
+}
+
 #contact h3 {
-    font-size: 36px;
+  font-size: 24px;
 }
 
 footer p {
