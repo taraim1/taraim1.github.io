@@ -1,0 +1,28 @@
+<section id="projects">
+  <h2>PROJECTS</h2>
+  <ul>
+    <% for (const project of projects) { %>
+    <li>
+      <div class="project-card">
+        <h3><%= project.title %></h3>
+        <hr />
+        <p class="project-description"><%= project.description %></p>
+        <ul>
+          <% for (const detail of project.details) { %>
+          <li><%= detail %></li>
+          <% } %>
+        </ul>
+        <p class="project-skills">관련 키워드 | <%= project.skills %></p>
+        <div class="project-related-links">
+          <% for (const link of project.links) { %>
+          <a href="<%= link.href %>" target="_blank" rel="noopener noreferrer">
+            <img src="<%= link.icon %>" alt="<%= link.label %>" />
+            <%= link.label %>
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </li>
+    <% } %>
+  </ul>
+</section>

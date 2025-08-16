@@ -1,0 +1,24 @@
+<section id="skills">
+  <h2>SKILLS</h2>
+  <ul class="skill-types">
+    <% for (const category of skills) { %>
+    <li>
+      <%= category.category %>
+      <ul class="skill-names">
+        <% for (const skill of category.skills) { %>
+        <li>
+          <% if (skill.link) { %>
+          <a href="<%= skill.link %>" target="_blank" rel="noopener noreferrer">
+            <% } %>
+            <img src="<%= skill.icon %>" alt="<%= skill.name %> icon" />
+            <%= skill.name %> <% if (skill.extraIcon) { %>
+            <img src="<%= skill.extraIcon %>" alt="link" />
+            <% } %> <% if (skill.link) { %></a
+          ><% } %>
+        </li>
+        <% } %>
+      </ul>
+    </li>
+    <% } %>
+  </ul>
+</section>

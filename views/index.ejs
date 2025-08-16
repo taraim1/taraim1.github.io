@@ -13,144 +13,16 @@
     <script src="js/viz.js" defer></script>
     <title>Jeyul Kim</title>
   </head>
-  <body>
-    <header>
-      <nav id="fly-nav" class="fly-nav" aria-label="Primary">
-        <div class="container">
-          <ul class="menu">
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="title-wrap">
-        <div id="viz-top" class="viz" aria-hidden="true"></div>
-        <h1>JEYUL KIM</h1>
-        <div id="viz-bottom" class="viz" aria-hidden="true"></div>
-      </div>
-      <nav id="hero-nav">
-        <ul>
-          <li><a href="#about-me">ABOUT ME</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+   <body>
+    <%- include('partials/header') %>
+
     <main>
-      <section id="about-me">
-        <h2>ABOUT ME</h2>
-        <h3>하루하루 꾸준히 성장하는 개발자, 김제율입니다.</h3>
-        <ul>
-          <li>
-            <img
-              src="images/calendar.png"
-              alt="Calendar icon"
-              width="50"
-              height="50"
-            />생년월일 | 2007. 03. 14.
-          </li>
-          <li>
-            <img
-              src="images/location.png"
-              alt="location icon"
-              width="50"
-              height="50"
-            />위치 | 경기도 의왕시
-          </li>
-          <li>
-            <img
-              src="images/pencil.png"
-              alt="pencil icon"
-              width="50"
-              height="50"
-            />학력 | 중졸
-          </li>
-        </ul>
-      </section>
-      <section id="skills">
-        <h2>SKILLS</h2>
-        <!-- 스킬 목록은 json파일로 저장됨-->
-        <ul class="skill-types">
-          <% for (const category of skills) { %>
-            <li>
-              <%= category.category %>
-              <ul class="skill-names">
-                <% for (const skill of category.skills) { %>
-                  <li>
-                    <% if (skill.link) { %>
-                      <a href="<%= skill.link %>" target="_blank" rel="noopener noreferrer">
-                    <% } %>
-                      <img src="<%= skill.icon %>" alt="<%= skill.name %> icon" />
-                      <%= skill.name %>
-                      <% if (skill.extraIcon) { %>
-                        <img src="<%= skill.extraIcon %>" alt="link" />
-                      <% } %>
-                    <% if (skill.link) { %></a><% } %>
-                  </li>
-                <% } %>
-              </ul>
-            </li>
-          <% } %>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>PROJECTS</h2>
-        <!-- 프로젝트 목록은 json파일로 저장됨-->
-        <ul>
-          <% for (const project of projects) { %>
-          <li>
-            <div class="project-card">
-              <h3><%= project.title %></h3>
-              <hr />
-              <p class="project-description"><%= project.description %></p>
-              <ul>
-                <% for (const detail of project.details) { %>
-                <li><%= detail %></li>
-                <% } %>
-              </ul>
-              <p class="project-skills">관련 키워드 | <%= project.skills %></p>
-              <div class="project-related-links">
-              <% for (const link of project.links) { %>
-              <a
-                href="<%= link.href %>"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img src="<%= link.icon %>" alt="<%= link.label %>" /><%=
-                link.label %></a
-              >
-              <% } %>
-            </div>
-          </li>
-          <% } %>
-        </ul>
-      </section>
-      <section id="contact">
-        <h2>CONTACT</h2>
-        <h3>email | kimjeyul200426@gmail.com</h3>
-      </section>
+      <%- include('sections/about') %>
+      <%- include('sections/skills',  { skills }) %>
+      <%- include('sections/projects',{ projects }) %>
+      <%- include('sections/contact') %>
     </main>
-    <footer>
-      <p>
-        Some icons are from
-        <a href="https://thenounproject.com/">Noun Project</a>, licensed under
-        CC BY 3.0.
-      </p>
-      <p>
-        Used icons:
-        <a href="https://thenounproject.com/icon/calendar-861179/"
-          >"Calendar" by Thengakola</a
-        >,
-        <a href="https://thenounproject.com/icon/location-7963512/"
-          >"Location" by Jaya99</a
-        >,
-        <a href="https://thenounproject.com/icon/pencil-4525114/"
-          >"Pencil" by Saepul Hahwan</a
-        >.
-      </p>
-    </footer>
+
+    <%- include('partials/footer') %>
   </body>
 </html>
