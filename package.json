@@ -4,8 +4,8 @@
   "description": "김제율의 포트폴리오 페이지입니다.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "build": "node build.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

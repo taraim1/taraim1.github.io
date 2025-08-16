@@ -11,7 +11,7 @@
       {
         "href": "https://github.com/taraim1/portfolio-page",
         "label": "Github",
-        "icon": "/images/github.png"
+        "icon": "images/github.png"
       }
     ]
   },
@@ -29,12 +29,12 @@
       {
         "href": "https://github.com/taraim1/better-ground-turn-based-game",
         "label": "Github",
-        "icon": "/images/github.png"
+        "icon": "images/github.png"
       },
       {
         "href": "https://www.krafton.com/csr/betterground/",
         "label": "Better Ground",
-        "icon": "/images/KRAFTON_OG_Image.png"
+        "icon": "images/KRAFTON_OG_Image.png"
       }
     ]
   }
