@@ -25,4 +25,5 @@ app.get("/", function (req, res) {
   res.render("index", { projects: storedProjects, skills: storedSkills });
 });
 
-app.listen(443);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
