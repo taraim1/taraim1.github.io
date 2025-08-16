@@ -1,0 +1,41 @@
+[
+  {
+    "title": "포트폴리오 웹사이트",
+    "description": "포트폴리오 웹사이트 (1인)",
+    "details": [
+      "나만의 포트폴리오를 위한 웹사이트 개발",
+      "Vanilla JS를 이용한 인터랙티브 UI 구현"
+    ],
+    "skills": "HTML, CSS, JavaScript, NodeJS",
+    "links": [
+      {
+        "href": "https://github.com/taraim1/portfolio-page",
+        "label": "Github",
+        "icon": "/images/github.png"
+      }
+    ]
+  },
+  {
+    "title": "김춘식의 용병단",
+    "description": "크래프톤 Better Ground 프로그램 참가를 위한 게임 (4인, 팀 리더)",
+    "details": [
+      "Better Ground 프로그램 2차(최종) 선발",
+      "2024 G-STAR 행사 크래프톤 부스에서 단독 발표",
+      "전투 시스템 개발 및 전체 개발 조율 담당",
+      "행동 트리를 이용한 적 ai 구현"
+    ],
+    "skills": "C#, Unity",
+    "links": [
+      {
+        "href": "https://github.com/taraim1/better-ground-turn-based-game",
+        "label": "Github",
+        "icon": "/images/github.png"
+      },
+      {
+        "href": "https://www.krafton.com/csr/betterground/",
+        "label": "Better Ground",
+        "icon": "/images/KRAFTON_OG_Image.png"
+      }
+    ]
+  }
+]

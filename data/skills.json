@@ -1,0 +1,37 @@
+[
+  {
+    "category": "언어",
+    "skills": [
+      { "name": "HTML", "icon": "/images/HTML5.png" },
+      { "name": "CSS", "icon": "/images/CSS.png" },
+      { "name": "JavaScript", "icon": "/images/javascript.png" },
+      { "name": "Python", "icon": "/images/python.png" },
+      { "name": "C#", "icon": "/images/c-sharp.png" }
+    ]
+  },
+  {
+    "category": "백엔드",
+    "skills": [{ "name": "Node.js", "icon": "/images/nodeJS.png" }]
+  },
+  {
+    "category": "게임 개발",
+    "skills": [{ "name": "Unity", "icon": "/images/unity.png" }]
+  },
+  {
+    "category": "기타",
+    "skills": [
+      {
+        "name": "Github",
+        "icon": "/images/github.png",
+        "link": "https://github.com/taraim1",
+        "extraIcon": "/images/link.png"
+      },
+      {
+        "name": "Solved.ac",
+        "icon": "/images/solved-ac.png",
+        "link": "https://solved.ac/profile/taraim",
+        "extraIcon": "/images/link.png"
+      }
+    ]
+  }
+]
