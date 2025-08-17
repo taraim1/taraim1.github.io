@@ -6,7 +6,7 @@
   // 설정값
   const COUNT = 28; // 막대 개수
   const BASE = 10; // 기본 높이(px)
-  const AMPLITUDE = 60; // 최대 높이 증가량(px)
+  const AMPLITUDE = 80; // 최대 높이 증가량(px)
   const SPREAD = 50; // 가우스 spread
   const THRESHOLDY = 750; // 아래쪽 바에 영향을 미칠 수 있는 최대 Y값
 
