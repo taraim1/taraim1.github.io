@@ -409,7 +409,7 @@ footer a {
   }
 
   #viz-bottom {
-    margin: -55px auto 20px auto;
+    margin: -37.5px auto 20px auto;
     align-items: flex-end;
     transform: scaleY(-1);
   }
