@@ -380,9 +380,6 @@ main h3 {
   gap: 10px;
 }
 
-.project-related-links a {
-  min-width: 0;
-}
 
 #contact h2 {
   margin-bottom: 0;
@@ -401,7 +398,7 @@ footer a {
 
 /* 모바일용 */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   header h1 {
     font-size: 100px;
     margin: 25px 0;
