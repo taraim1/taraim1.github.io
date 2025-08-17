@@ -4,7 +4,11 @@
   if (!viz_top || !viz_bottom) return;
 
   // 설정값
-  const COUNT = 28; // 막대 개수
+  let COUNT = 28; // 막대 개수
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    COUNT = 14;
+  }
+
   const BASE = 10; // 기본 높이(px)
   const AMPLITUDE = 80; // 최대 높이 증가량(px)
   const SPREAD = 50; // 가우스 spread

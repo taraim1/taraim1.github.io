@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: black;
   text-align: center;
@@ -11,6 +16,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 body::before {
@@ -30,7 +37,7 @@ header h1 {
   font-size: 200px;
   font-weight: 400;
   color: white;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .title-wrap {
@@ -89,12 +96,6 @@ nav a {
   position: relative;
 }
 
-@media (max-width: 600px) {
-  nav a {
-    font-size: 64px;
-  }
-}
-
 nav a::after {
   content: "";
   position: absolute;
@@ -106,11 +107,24 @@ nav a::after {
 
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-nav a:hover::after {
-  transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+  nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  nav a:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  nav a:active::after {
+    transform: scaleX(1);
+    transition-duration: 0.4s;
+  }
 }
 
 .fly-nav {
@@ -183,6 +197,10 @@ main h3 {
   scroll-margin-top: 80px;
 }
 
+#about-me {
+  margin-bottom: 200px;
+}
+
 #about-me ul {
   color: white;
   list-style: none;
@@ -193,7 +211,7 @@ main h3 {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 200px 0;
+  margin: 0;
 }
 
 #about-me img {
@@ -213,6 +231,7 @@ main h3 {
 .skill-types {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 36px;
+  padding: 0;
 }
 
 .skill-types > li {
@@ -225,9 +244,7 @@ main h3 {
 }
 
 .skill-names {
-  text-align: left;
-  align-items: center;
-  display: flex;
+  display: inline-flex;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -261,18 +278,22 @@ main h3 {
   gap: 10px;
 }
 
-#projects > ul {
+#projects {
+  margin-bottom: 200px;
+}
+
+#project-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   list-style: none;
   padding: 0;
-  margin: 0 10% 200px 10%;
+  margin: 0 10% 0 10%;
   text-align: left;
 }
 
 @media (max-width: 1600px) {
-  #projects > ul {
+  #project-list {
     grid-template-columns: 1fr;
   }
 }
@@ -282,19 +303,12 @@ main h3 {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 340px;
-}
-
-@media (max-width: 800px) {
-  .project-card {
-    height: 450px;
-  }
 }
 
 .project-card h3 {
   color: white;
   padding: 0;
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 0;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 32px;
   background-color: black;
@@ -308,7 +322,7 @@ main h3 {
 }
 
 .project-card .project-description {
-  margin: 10px 0 10px 20px;
+  margin: 10px 10px 10px 20px;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
   font-weight: 800;
@@ -319,14 +333,14 @@ main h3 {
   font-size: 20px;
   font-weight: 500;
   list-style: disc;
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 0;
 }
 
 .project-card .project-skills {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 10px;
   padding: 2px 5px;
   color: rgb(110, 104, 45);
   background-color: rgb(255, 234, 165);
@@ -339,7 +353,7 @@ main h3 {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  margin: 10px 0 10px 10px;
+  margin: 0;
   padding: 2px 5px;
   text-decoration: none;
   color: black;
@@ -361,6 +375,13 @@ main h3 {
 
 .project-related-links {
   display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  gap: 10px;
+}
+
+.project-related-links a {
+  min-width: 0;
 }
 
 #contact h2 {
@@ -376,4 +397,90 @@ footer p {
 }
 footer a {
   color: rgb(68, 68, 68);
+}
+
+/* 모바일용 */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 100px;
+    margin: 25px 0;
+  }
+
+  #viz-top {
+    margin: 20px auto -37.5px auto;
+  }
+
+  #viz-bottom {
+    margin: -55px auto 20px auto;
+    align-items: flex-end;
+    transform: scaleY(-1);
+  }
+
+  #hero-nav ul {
+    flex-wrap: wrap;
+    margin: 0 0 150px 0;
+  }
+
+  nav a {
+    font-size: 64px;
+    margin: 0 30px;
+  }
+
+  .fly-nav a {
+    margin: 0 10px;
+    font-size: 24px;
+  }
+
+  #about-me {
+    margin-bottom: 0px;
+  }
+  #about-me h3 {
+    font-size: 24px;
+  }
+
+  #about-me ul {
+    font-size: 18px;
+    gap: 20px;
+  }
+
+  #skills {
+    margin: 0;
+  }
+
+  .skill-names {
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: center;
+  }
+
+  .skill-types > li {
+    font-size: 24px;
+    word-break: keep-all;
+    flex-direction: column;
+  }
+
+  #projects {
+    margin: 0;
+  }
+
+  .project-card h3 {
+    font-size: 24px;
+  }
+
+  .project-card .project-description {
+    font-size: 16px;
+  }
+
+  .project-card ul {
+    font-size: 16px;
+  }
+
+  .project-card .project-skills {
+    font-size: 16px;
+  }
+
+  .project-card a {
+    font-size: 16px;
+  }
 }

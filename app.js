@@ -9,6 +9,12 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+  const userAgent = req.headers['user-agent'] || '';
+  const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobi/i.test(userAgent);
+  res.locals.isMobile = isMobile;
+  next();
+});
 
 app.get("/", function (req, res) {
   const ProjectsFilePath = path.join(__dirname, "data", "projects.json");
