@@ -57,7 +57,7 @@ header h1 {
 }
 
 #viz-bottom {
-  margin: -37.5px auto 200px auto;
+  margin: -50px auto 200px auto;
   align-items: flex-end;
   transform: scaleY(-1);
 }
@@ -409,9 +409,7 @@ footer a {
   }
 
   #viz-bottom {
-    margin: -37.5px auto 20px auto;
-    align-items: flex-end;
-    transform: scaleY(-1);
+  margin: -42.5px auto 200px auto;
   }
 
   #hero-nav ul {
