@@ -89,6 +89,12 @@ nav a {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  nav a {
+    font-size: 64px;
+  }
+}
+
 nav a::after {
   content: "";
   position: absolute;
