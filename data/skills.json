@@ -11,7 +11,10 @@
   },
   {
     "category": "프론트엔드",
-    "skills": [{ "name": "React", "icon": "images/react.png" }]
+    "skills": [
+      { "name": "React", "icon": "images/react.png" },
+      { "name": "Vite", "icon": "images/vite.png" }
+    ]
   },
   {
     "category": "백엔드",
